@@ -1,7 +1,7 @@
 ---
 title: On the Combination of Attention and Transducer Models for ASR
 date: 2024-12-19 20:00:00 +0100
-categories: [research, thesis]
+categories: [university, thesis]
 tags: [thesis, asr]     # TAG names should always be lowercase
 description: In this post I summarize my master thesis and the key findings.
 math: true
@@ -54,7 +54,7 @@ _Conformer model architecture (adapted from [Gulati & Qin 2020])._
 ### Attention Decoder
 
 ![attention](/media/24-12-19-MT/attention.png)
-_Visualization of the cross-attention decoder unfolded over time._
+_Visualization of the cross-attention decoder._
 
 ### Transducer-based Models: CTC and RNN-T
 
