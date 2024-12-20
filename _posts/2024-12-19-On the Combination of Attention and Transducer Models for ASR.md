@@ -1,9 +1,9 @@
 ---
 title: On the Combination of Attention and Transducer Models for ASR
 date: 2024-12-19 20:00:00 +0100
-categories: [university, thesis]
+categories: [university]
 tags: [thesis, asr]     # TAG names should always be lowercase
-description: In this post I summarize my master thesis and the key findings.
+description: In this post I summarize my master thesis.
 math: true
 ---
 
