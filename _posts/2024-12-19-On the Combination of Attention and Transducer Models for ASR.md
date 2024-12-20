@@ -1,5 +1,5 @@
 ---
-title: On the Combination of Attention and Transducer Models for ASR
+title: On the Combination of Attention and Transducer Models for ASR (Master Thesis)
 date: 2024-12-19 20:00:00 +0100
 categories: [university]
 tags: [thesis, asr]     # TAG names should always be lowercase
@@ -7,7 +7,7 @@ description: In this post I summarize my master thesis.
 math: true
 ---
 
-# On the Combination of Attention and Transducer Models for Automatic Speech Recognition (Master Thesis)
+Title: On the Combination of Attention and Transducer Models for Automatic Speech Recognition
 
 Code repository: [https://github.com/rwth-i6/i6_experiments/tree/main/users/gaudino](https://github.com/rwth-i6/i6_experiments/tree/main/users/gaudino)
 

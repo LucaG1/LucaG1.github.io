@@ -6,8 +6,6 @@ tags: [bug list, general tips]     # TAG names should always be lowercase
 description: Different problems I encountered (not project specific)
 ---
 
-# General Bug List
-
 Sometimes I solve a problem, forget the exact solution and run into it again later. Solving a problem again If you should actually remember the solution is really annoying and also inefficient. By keeping track of past bugs and problems I hope to get ahead of repeating myself. Maybe I can also help others with solutions from this list at some point.
 
 ## Connecting to Github via ssh on Windows
