@@ -74,3 +74,23 @@ After this did not work I tried the second answer using
 ` sudo apt install --reinstall python3-apt`
 
 This worked. However the answer mentioned problems with python setups that can occur because of this.
+
+## Conflict of Hyper-V and VirtualBox when trying minikube
+
+First I tried this from the Windows Documentation:
+
+`Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Hypervisor`
+
+However it did not work.
+
+Then I tried disabling it via:
+
+To disable:
+
+`bcdedit /set hypervisorlaunchtype off`
+
+To enable:
+
+`bcdedit /set hypervisorlaunchtype auto`
+
+Now everything seems fine. However I'm not sure if I need to reactivate Hyper-V at some point.

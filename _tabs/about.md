@@ -7,8 +7,6 @@ order: 4
 <!-- > Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
 {: .prompt-tip } -->
 
-# About me
-
 Hi, I'm Luca Gaudino, freshly graduated, enthusiastic about Machine Learning and Data Science, open minded, like to go outside and explore, striving to become professional, calm, keeping busy, believe in man's inherent goodness, always learning, getting to know other people, like to help others develop, value good food, sustainability, trust, fascinated by technology, soccer.
 
 ## Education
