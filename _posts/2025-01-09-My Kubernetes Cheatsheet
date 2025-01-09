@@ -1,0 +1,18 @@
+---
+title: My Kubernetes Cheatsheet
+date: 2025-01-09 23:00:00 +0100
+categories: [cheatsheets]
+tags: [cheatsheet, kubernetes]     # TAG names should always be lowercase
+description: Commands I encountered when learning about kubernetes.
+---
+
+I will use this as a cheatsheet while learning about kubernetes. I started out with minikube to set up a local kubernetes cluster.
+
+# Minikube
+
+## Addons in minikube
+```
+minikube addons list
+minikube addons enable dashboard
+minikube addons enable metrics-server
+```
