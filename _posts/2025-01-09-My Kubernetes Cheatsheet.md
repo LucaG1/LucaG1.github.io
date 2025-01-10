@@ -35,4 +35,13 @@ Also possible to use `kubectl apply -f def-pod.yaml`. TODO: what is the differen
 kubectl get pods
 kubectl get pod nginx-pod -o yaml
 kubectl describe pod nginx-pod
+kubectl logs nginx-pod
+```
+
+# Replica Sets
+
+Apparently ReplicationControllers < ReplicaSets < Deployments
+```
+kubectl get rs
+kubectl scale rs frontend --replicas=4
 ```
