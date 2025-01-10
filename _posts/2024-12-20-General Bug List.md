@@ -94,3 +94,7 @@ To enable:
 `bcdedit /set hypervisorlaunchtype auto`
 
 Now everything seems fine. However I'm not sure if I need to reactivate Hyper-V at some point.
+
+## Clang missing for instaling python-ldap
+
+`sudo apt install clang`
