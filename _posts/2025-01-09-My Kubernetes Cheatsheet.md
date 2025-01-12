@@ -6,7 +6,13 @@ tags: [cheatsheet, kubernetes]     # TAG names should always be lowercase
 description: Commands I encountered when learning about kubernetes.
 ---
 
-I will use this as a cheatsheet while learning about kubernetes. I started out with minikube to set up a local kubernetes cluster.
+I will use this as a cheatsheet while learning about kubernetes. 
+
+Steps to learn kubernetes:
+
+- Online course: [https://learning.edx.org/course/course-v1:LinuxFoundationX+LFS158x+1T2024/home](https://learning.edx.org/course/course-v1:LinuxFoundationX+LFS158x+1T2024/home)
+
+I use minikube to set up a local kubernetes cluster.
 
 ephemeral - vergänglich
 
@@ -32,6 +38,8 @@ Compontent status and other
 kubectl get cs
 
 kubectl get po -A # get pods from all namespaces
+kubectl get pods -L k8s-app,label2 # get pods with the labels
+kubectl get pods -l k8s-app=web-dash
 ```
 
 ```
@@ -181,6 +189,108 @@ kubectl get deploy,po,svc,ep -l app=deploy-hello --show-labels
 
 ```
 kubectl port-forward deploy/frontend 8080:5000
-kubectl port-forward frontend-77cbdf6f79-qsdts 8080:5000
+kubectl port-forward frontend-77cbd23f79-qsdtt 8080:5000
 kubectl port-forward svc/frontend-svc 8080:80
 ```
+
+## Ingress
+
+```
+kubectl replace --force -f ingress-demo.yaml
+```
+
+# Liveness probe
+
+```
+kubectl get pod liveness-exec -w
+```
+
+# Volumes
+
+- TODO
+
+# ConfigMap and Secrets
+
+```
+kubectl create configmap my-config --from-literal=key1=value1 --from-literal=key2=value2
+kubectl create configmap permission-config --from-file=<path/to/file>
+
+kubectl get cm
+```
+
+```
+kubectl create secret generic my-password --from-literal=password=mysqlpassword
+kubectl create secret generic my-file-password --from-file=password.txt
+```
+
+# Other topics
+
+## Annotation
+```
+kubectl annotate pod mypod key1=value1 key2=value2
+kubectl run saved --image=nginx:alpine --save-config=true
+```
+
+## Quotas
+
+## Autoscaling
+
+Horizontal Pod Autoscaler
+```
+kubectl autoscale deploy myapp --min=2 --max=10 --cpu-percent=80
+```
+
+## Jobs and CronJobs
+
+- Jobs: perform a task with pods on kubernetes cluster
+- CronJobs: schedule Jobs
+
+## Custom rescources
+
+- at least possible
+
+## Security context
+
+## Network policies
+
+- similar to firewall
+
+## Monitoring, Logging and Debugging
+
+Metrics server (plugin)
+```
+kubectl top nodes --sort-by=cpu
+kubectl top pods --sort-by=memory
+```
+
+Prometheus
+
+Logging
+
+- Limited kubernetes logging capabilities
+- Suggestion for clusterwide logging: Elasticsearch with fluentd
+
+```
+kubectl logs pod-name
+kubectl logs pod-name container-name
+kubectl logs pod-name container-name -p # last failed container
+```
+ - Interact with running container
+```
+kubectl exec pod-name -- ls -la /
+kubectl exec pod-name -c container-name -- env
+kubectl exec pod-name -c container-name -it -- /bin/sh
+```
+
+- Tip: TAB after -c to list running containers
+
+## Helm
+- bundle of manifests: Chart
+- Helm: package manager for kubernetes
+
+## Service Mesh
+- alternative to native kubernetes services
+- different implementations
+
+## 
+
