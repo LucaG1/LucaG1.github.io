@@ -98,3 +98,11 @@ Now everything seems fine. However I'm not sure if I need to reactivate Hyper-V 
 ## Clang missing for instaling python-ldap
 
 `sudo apt install clang`
+
+## Installing adding an ipykernel for a venv
+
+```
+# activate myenv
+pip install ipykernel
+python -m ipykernel install --user --name myenv --display-name "Python (myenv)
+```
