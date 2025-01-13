@@ -1,6 +1,6 @@
 ---
 title: My PostgreSQL Cheatsheet
-date: 2025-01-09 23:00:00 +0100
+date: 2025-01-12 22:00:00 +0100
 categories: [cheatsheets]
 tags: [cheatsheet, postgresql]     # TAG names should always be lowercase
 description: Commands I encountered when learning about PostgreSQL.
@@ -37,7 +37,7 @@ Execute os command from psql:
 \! <command>
 ```
 
-smallest block/storage size: 8kb
+smallest block/storage page size: 8kb
 
 show table size
 ```
