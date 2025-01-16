@@ -29,3 +29,16 @@ Brackets for passing output as paramters
 ```
 Stop-Service -DisplayName (Get-Content -Path $env:TEMP\services.txt)
 ```
+
+## History
+
+Session history:
+
+```
+Get-History
+```
+
+Search full history:
+```
+Get-Content (Get-PSReadlineOption).HistorySavePath | ? { $_ -like '*mlflow*' }
+```

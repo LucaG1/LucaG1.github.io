@@ -99,10 +99,10 @@ Now everything seems fine. However I'm not sure if I need to reactivate Hyper-V 
 
 `sudo apt install clang`
 
-## Installing adding an ipykernel for a venv
+## Adding an ipykernel for a venv
 
 ```
 # activate myenv
 pip install ipykernel
-python -m ipykernel install --user --name myenv --display-name "Python (myenv)
+python -m ipykernel install --user --name myenv --display-name "Python (myenv)"
 ```
