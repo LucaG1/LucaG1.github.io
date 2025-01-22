@@ -95,9 +95,13 @@ To enable:
 
 Now everything seems fine. However I'm not sure if I need to reactivate Hyper-V at some point.
 
-## Clang missing for instaling python-ldap
+## Clang missing for installing python-ldap
 
 `sudo apt install clang`
+
+## python venv with prompt name
+
+`python -m venv .venv --prompt my_venv_name`
 
 ## Adding an ipykernel for a venv
 
