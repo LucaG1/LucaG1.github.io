@@ -10,7 +10,23 @@ I heard a lecture about Databases during my Bachelor studies long ago. Time to r
 
 I use the course *PostgreSQL Essential v16* from EDB.
 
-TODO: actually install postgresql
+
+# Connect to postgres on ubuntu 24
+
+```
+sudo -i -u postgres
+
+psql
+```
+
+connect
+```
+\c <database_name>
+```
+
+quit `\q`
+
+## Other commands
 
 
 Anyway, first commands shown
@@ -43,6 +59,8 @@ show table size
 ```
 \dt+ test
 ```
+
+# General information
 
 Database Cluster Data Directory Layout
 
