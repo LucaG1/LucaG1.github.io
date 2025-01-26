@@ -13,11 +13,97 @@ I use the course *PostgreSQL Essential v16* from EDB.
 
 # Connect to postgres on ubuntu 24
 
+## Some checks
+
+```
+systemctl status postgresql
+
+pg_isready -h localhost -p 5432
+```
+
 ```
 sudo -i -u postgres
 
 psql
+
+# also
+
+psql -p 5432 -U postgres -d postgres
 ```
+
+possible to set environmental variables: `PGDATABASE, PGHOST, PGPORT` and `PGUSER`
+
+
+## Execute file
+
+```
+psql -f edbstore.sql
+```
+
+## Configuration
+
+Aiuthentication:
+
+```
+nano /etc/postgresql/16/main/pg_hba.conf 
+
+
+psql -c 'SELECT pg_reload_conf()'
+```
+
+# User tools - CLI
+
+wildcards `?` and `*`
+
+"" for case sensitivity
+
+```
+\?
+\h [command]
+
+\c
+\s
+\s FILENAME
+
+\e
+\e FILENAME
+
+\w FILENAME
+
+\o FILENAME # output piped to file
+
+\g FILENAME
+
+\watch <seconds>#
+
+\set city Edmonton
+\echo :city
+\unset city
+
+\if
+\elif
+\else
+\endif
+
+\d[(i|s|t|v|b|S)][+] [patern]
+
+\du # all users
+\dn[+] # schemas
+\df[+] # functions
+
+\l[+]
+
+\conninfo
+\cd [directory]
+
+\! [command]
+
+\q
+```
+
+`+` for additional information
+
+special variable `ATUOCOMMIT, ENCODING, HISTFILE` etc.
 
 connect
 ```
@@ -25,6 +111,9 @@ connect
 ```
 
 quit `\q`
+
+
+
 
 ## Other commands
 
@@ -73,3 +162,10 @@ Database Cluster Data Directory Layout
  - status directories
  - configuration files: postgresql.conf, pg_hba.conf, pg_ident.conf, postgresql.auto.conf
  - Postmaster info files
+
+ Initial databases:
+ - template1
+ - template0
+ - postgres
+
+ Check course for details on how to set up a new cluster using `pg_ctlcluster`
