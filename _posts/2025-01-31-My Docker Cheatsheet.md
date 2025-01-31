@@ -10,3 +10,13 @@ Start docker compose in current directory i think
 ```
 docker compose up -d
 ```
+
+List docker processes
+```
+docker ps
+```
+
+Execute interactive command
+```
+docker exec -it [CONTAINER ID] psql -U myuser mydatabase
+```
