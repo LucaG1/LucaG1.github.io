@@ -110,3 +110,12 @@ Now everything seems fine. However I'm not sure if I need to reactivate Hyper-V 
 pip install ipykernel
 python -m ipykernel install --user --name myenv --display-name "Python (myenv)"
 ```
+
+## Using pipx with pyenv-win
+pipx by default used some other python version to install
+Fix: Set default python version beforehand
+```
+set -Name "PIPX_DEFAULT_PYTHON" -Value "$HOME\.pyenv\pyenv-win\versions\3.12.8\python"
+python -m pip install pipx
+python -m pipx ensurepath
+```
