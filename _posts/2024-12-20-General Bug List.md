@@ -119,3 +119,14 @@ set -Name "PIPX_DEFAULT_PYTHON" -Value "$HOME\.pyenv\pyenv-win\versions\3.12.8\p
 python -m pip install pipx
 python -m pipx ensurepath
 ```
+
+## Installing pipenv on windows with pyenv: Problem with previously install system python
+
+```
+python -m site
+```
+showed an additional path for site-packages
+
+There are some configuration options for the default paths of the `site` module. However, it was not clear to me how to set them.
+Solution: Manually deinstall old python version and delete the default site-packages folder.
+ 
